@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samik Coffe - Premium Taste</title>
+
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo-text">Samik Coffe</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Rasakan Kopi Terbaik<br>Dalam Suasana Premium</h1>
+            <p>Kopi pilihan, makanan lezat, dan tempat nyaman untuk Anda bersantai.</p>
+            
+            <a href="https://wa.me/6281234567890?text=Halo%20Samik%20Coffe,%20saya%20ingin%20pesan%20meja/menu." 
+               target="_blank" 
+               class="btn-primary">
+               Pesan via WhatsApp ➔
+            </a>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <h2 class="section-title">Menu Pilihan</h2>
+        <p class="section-desc">Kami menyajikan menu terbaik dengan bahan berkualitas tinggi.</p>
+
+        <div class="menu-grid">
+            <div class="menu-card">
+                <span class="badge">Best Seller</span>
+                <img src="img/kopi.png" alt="Kopi Hitam" onerror="this.src='https://placehold.co/400x300?text=Kopi+Hitam'">
+                <h3>Kopi Hitam</h3>
+                <p class="price">Rp 15.000</p>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/capu.png" alt="Cappuccino" onerror="this.src='https://placehold.co/400x300?text=Cappuccino'">
+                <h3>Cappuccino</h3>
+                <p class="price">Rp 20.000</p>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/pasta.png" alt="Pasta" onerror="this.src='https://placehold.co/400x300?text=Pasta'">
+                <h3>Pasta</h3>
+                <p class="price">Rp 25.000</p>
+            </div>
+
+            <div class="menu-card">
+                <img src="img/kue coklat.png" alt="Kue Coklat" onerror="this.src='https://placehold.co/400x300?text=Kue+Coklat'">
+                <h3>Kue Coklat</h3>
+                <p class="price">Rp 18.000</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2 class="section-title">Galeri</h2>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="img/interior.png" alt="Interior" onerror="this.src='https://placehold.co/400x300?text=Interior'">
+                <div class="gallery-overlay">Interior Kafe</div>
+            </div>
+            <div class="gallery-card">
+                <img src="img/biji.png" alt="Biji Kopi" onerror="this.src='https://placehold.co/400x300?text=Biji+Kopi'">
+                <div class="gallery-overlay">Biji Kopi Premium</div>
+            </div>
+            <div class="gallery-card">
+                <img src="img/roti.png" alt="Roti" onerror="this.src='https://placehold.co/400x300?text=Roti'">
+                <div class="gallery-overlay">Roti Segar</div>
+            </div>
+            <div class="gallery-card">
+                <img src="img/segar.png" alt="Minuman" onerror="this.src='https://placehold.co/400x300?text=Minuman'">
+                <div class="gallery-overlay">Minuman Segar</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <h2 class="section-title">Tentang Kami</h2>
+        <div class="about-wrapper">
+            <img src="img/inte.jpeg" alt="Tentang Kafe" onerror="this.src='https://placehold.co/600x400?text=Tentang+Kami'">
+            <div class="about-text">
+                <h3>Kafe dengan Cita Rasa & Kenyamanan</h3>
+                <p>Kami percaya bahwa secangkir kopi bukan hanya minuman—tetapi pengalaman. Kami memilih biji kopi terbaik dan suasana premium untuk Anda.</p>
+                <div class="about-features">
+                    <div class="feat"><h4>☕ Premium Beans</h4><p>Biji kopi pilihan terbaik.</p></div>
+                    <div class="feat"><h4>🔥 Freshly Roasted</h4><p>Diproses standar tinggi.</p></div>
+                    <div class="feat"><h4>🍰 Handmade Dessert</h4><p>Kue buatan chef kami.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan Anda" required></textarea>
+                <button class="btn-primary">Kirim Pesan</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Lokasi & Kontak</h3>
+                <p>📍 Jalan Kenanga No. 45, Palangka Raya</p>
+                <p>⏰ 08.00 - 22.00 WIB</p>
+                <p>📞 0812-3456-7890</p>
+                
+                <iframe src="https://maps.google.com/maps?q=palangka%20raya&t=&z=13&ie=UTF8&iwloc=&output=embed" class="map" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Samik Coffe</h2>
+                <p>Kopi terbaik dalam suasana premium.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Sosial Media</h3>
+                <div class="icons">
+                    <span>Instagram: @samikcoffe</span><br>
+                    <span>WhatsApp: 0812-3456-7890</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Samik Coffe — All Rights Reserved.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20tanya..." class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+    </a>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

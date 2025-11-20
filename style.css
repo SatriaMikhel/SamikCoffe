@@ -1,0 +1,171 @@
+/* RESET & GLOBAL */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5DC;
+    color: #333;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+img { max-width: 100%; display: block; }
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1rem 5%;
+    background: rgba(0,0,0,0.8); /* Lebih gelap agar logo teks terbaca */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+/* Styling Logo Teks */
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFD700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Styling Logo Gambar (Jika nanti dipakai) */
+.logo-img {
+    height: 45px;
+    width: auto;
+}
+
+.navbar ul { display: flex; gap: 2rem; list-style: none; }
+.navbar a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.navbar .nav-list a:hover { color: #FFD700; }
+
+/* HAMBURGER MENU */
+.menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+.menu-toggle .bar { width: 25px; height: 3px; background-color: white; border-radius: 3px; transition: 0.3s; }
+
+/* HERO */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background: url('img/cafe.png') center/cover no-repeat;
+    background-color: #222; /* Fallback color */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)); }
+
+.hero-content { position: relative; color: white; text-align: center; max-width: 700px; padding: 0 20px; }
+.hero-content h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1rem; }
+
+/* BUTTON STYLE */
+.btn-primary {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2.2rem;
+    background: #25D366; /* Warna Hijau WhatsApp */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-primary:hover { background: #128C7E; transform: scale(1.05); }
+
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover { transform: scale(1.1); background-color: #128C7E; }
+.whatsapp-float img { width: 35px; height: 35px; }
+
+/* SECTIONS */
+.section { max-width: 1200px; margin: 5rem auto; padding: 0 2rem; }
+.section-title { font-size: 2.5rem; text-align: center; margin-bottom: 0.5rem; }
+.section-desc { text-align: center; margin-bottom: 3rem; color: #666; }
+
+/* CARDS (Menu & Gallery) */
+.menu-grid, .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+
+.menu-card { background: white; padding: 1.5rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; transition: 0.3s; }
+.menu-card:hover { transform: translateY(-10px); }
+.menu-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem; }
+
+.badge { background: #FFD700; color: #333; padding: 5px 12px; position: absolute; top: 15px; right: 15px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; }
+.price { font-size: 1.2rem; font-weight: 600; color: #A0522D; }
+
+.gallery-card { position: relative; border-radius: 12px; overflow: hidden; height: 250px; }
+.gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.gallery-card:hover img { transform: scale(1.1); }
+.gallery-overlay { position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.6); padding: 1rem; color: white; text-align: center; transform: translateY(100%); transition: 0.3s; }
+.gallery-card:hover .gallery-overlay { transform: translateY(0); }
+
+/* ABOUT & CONTACT */
+.about-wrapper, .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about-wrapper img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+.contact-form { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.contact-form input, .contact-form textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ddd; }
+.contact-form textarea { height: 120px; resize: none; }
+.map { width: 100%; height: 300px; border-radius: 12px; border: 0; margin-top: 1.5rem; }
+
+/* FOOTER */
+.footer { background: #222; color: white; padding: 4rem 2rem; margin-top: 4rem; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; }
+.footer-links ul { list-style: none; } 
+.footer-links a { color: #ccc; text-decoration: none; } 
+.footer-links a:hover { color: #FFD700; }
+.footer-bottom { text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid #444; color: #888; }
+
+/* ================= RESPONSIVE (MOBILE) ================= */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+    
+    .navbar ul {
+        position: fixed; top: 0; right: -100%; width: 70%; height: 100vh;
+        background: rgba(0, 0, 0, 0.95); flex-direction: column;
+        align-items: center; justify-content: center; transition: 0.4s;
+    }
+    .navbar ul.active { right: 0; }
+    .navbar ul li { margin: 1.5rem 0; }
+    
+    /* Typography & Layout Adjustments */
+    .hero-content h1 { font-size: 2.2rem; }
+    .about-wrapper, .contact-container { grid-template-columns: 1fr; gap: 2rem; }
+    .about-wrapper img { order: -1; } /* Gambar About di atas teks */
+    .section { margin: 3rem auto; }
+    
+    /* Hamburger Animation */
+    .menu-toggle.active .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+}
